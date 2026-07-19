@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BrainVC — The VC Brain · Hack-Nation Pitch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #14172b;
+    --ink-2: #4c5165;
+    --muted: #7a7f94;
+    --indigo: #3b4bd8;
+    --indigo-soft: #e4e8fb;
+    --card: #fdfdff;
+    --line: #dcdfef;
+    --good: #0a7d0a;
+    --good-bg: #e7f5e7;
+    --warn: #8a5f00;
+    --warn-bg: #faf0d8;
+    --crit: #b32e2e;
+    --crit-bg: #fbe7e7;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background:
+      radial-gradient(1100px 560px at 88% -8%, rgba(160,150,235,.28), transparent 60%),
+      radial-gradient(900px 520px at -8% 34%, rgba(140,170,240,.24), transparent 55%),
+      linear-gradient(168deg, #f2f5fd 0%, #e7ebfa 100%);
+    background-attachment: fixed;
+    overflow: hidden;
+  }
+  .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+  .deck { height: 100vh; position: relative; }
+  .slide {
+    position: absolute; inset: 0; display: none;
+    padding: 5.5vh 7vw; flex-direction: column;
+  }
+  .slide.active { display: flex; }
+  .eyebrow {
+    font-size: 12px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--muted); font-weight: 600; margin-bottom: 14px;
+  }
+  h1 { font-size: clamp(40px, 6.4vw, 84px); font-weight: 300; letter-spacing: -0.02em; line-height: 1.04; }
+  h2 { font-size: clamp(28px, 3.6vw, 46px); font-weight: 300; letter-spacing: -0.01em; margin-bottom: 3.5vh; }
+  h2 strong { font-weight: 600; }
+  p.lede { font-size: clamp(15px, 1.4vw, 19px); color: var(--ink-2); max-width: 62ch; line-height: 1.55; }
+  .grow { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+  .cards { display: grid; gap: 14px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+    padding: 20px 22px;
+    box-shadow: 0 1px 2px rgba(40,45,110,.05), 0 12px 34px -10px rgba(40,45,110,.13);
+  }
+  .card h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+  .card p { font-size: 13.5px; color: var(--ink-2); line-height: 1.5; }
+  .chip {
+    display: inline-block; border-radius: 999px; padding: 3px 11px;
+    font-family: "JetBrains Mono", monospace; font-size: 10.5px; font-weight: 600;
+    letter-spacing: .06em; text-transform: uppercase; border: 1px solid transparent;
+  }
+  .chip.good { color: var(--good); background: var(--good-bg); border-color: rgba(10,125,10,.25); }
+  .chip.warn { color: var(--warn); background: var(--warn-bg); border-color: rgba(138,95,0,.25); }
+  .chip.crit { color: var(--crit); background: var(--crit-bg); border-color: rgba(179,46,46,.25); }
+  .chip.ind  { color: var(--indigo); background: var(--indigo-soft); border-color: rgba(59,75,216,.25); }
+  .stat { text-align: left; }
+  .stat .n { font-family: "JetBrains Mono", monospace; font-size: clamp(30px, 3.4vw, 46px); font-weight: 600; }
+  .stat .l { font-size: 12px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+  .flow { display: flex; align-items: stretch; gap: 10px; flex-wrap: wrap; }
+  .flow .step {
+    flex: 1; min-width: 150px; background: var(--card); border: 1px solid var(--line);
+    border-radius: 16px; padding: 16px 16px;
+    box-shadow: 0 10px 28px -12px rgba(40,45,110,.14);
+  }
+  .flow .step b { display: block; font-size: 14px; margin-bottom: 5px; }
+  .flow .step span { font-size: 12px; color: var(--ink-2); line-height: 1.45; display: block; }
+  .flow .arrow { align-self: center; color: var(--muted); font-size: 18px; }
+  .foot {
+    margin-top: 3vh; display: flex; justify-content: space-between; align-items: center;
+    font-size: 12px; color: var(--muted);
+  }
+  .kbd { border: 1px solid var(--line); background: #fff; border-radius: 6px; padding: 1px 7px; font-family: "JetBrains Mono", monospace; font-size: 11px; }
+  .counter { font-family: "JetBrains Mono", monospace; }
+  ul.tight { list-style: none; }
+  ul.tight li { padding-left: 22px; position: relative; margin-bottom: 10px; font-size: 14.5px; color: var(--ink-2); line-height: 1.5; }
+  ul.tight li::before { content: "—"; position: absolute; left: 0; color: var(--indigo); }
+  .two { display: grid; grid-template-columns: 1.05fr .95fr; gap: 4vw; align-items: center; }
+  .quote {
+    border-left: 3px solid var(--indigo); padding: 8px 0 8px 18px;
+    font-size: 15px; color: var(--ink-2); font-style: italic; line-height: 1.55;
+  }
+  .logo { display: flex; align-items: center; gap: 10px; margin-bottom: 5vh; }
+  .logo .b {
+    width: 34px; height: 34px; border-radius: 999px; background: var(--indigo); color: #fff;
+    display: grid; place-items: center; font-weight: 700; font-size: 15px;
+  }
+  .logo .t { font-weight: 600; font-size: 15px; }
+  .logo .tag { font-size: 10px; letter-spacing: .14em; border: 1px solid var(--line); background:#fff; border-radius: 999px; padding: 3px 10px; color: var(--muted); text-transform: uppercase; }
+  table.map { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  table.map td { padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.map td:first-child { white-space: nowrap; font-weight: 600; width: 34%; }
+  table.map td:first-child .mono { color: var(--muted); font-weight: 400; font-size: 11px; }
+  @media print {
+    body { overflow: visible; background: #fff; }
+    .deck { height: auto; }
+    .slide { display: flex !important; position: relative; height: 100vh; page-break-after: always; }
+    .foot .kbd, .hint { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="deck">
+
+  <!-- 1 · TITLE -->
+  <section class="slide active">
+    <div class="logo"><span class="b">B</span><span class="t">BrainVC</span><span class="tag">The VC Brain</span></div>
+    <div class="grow">
+      <div class="eyebrow">Hack-Nation 6th Global AI Hackathon · Challenge 02 · Maschmeyer Group</div>
+      <h1>Every claim traced.<br>Every founder remembered.<br><strong style="font-weight:600">$100K decided in minutes.</strong></h1>
+      <p class="lede" style="margin-top:3vh">A data- and AI-first operating system for venture capital — sourcing, verifying, and deciding with an audit trail an investor can click through to the original evidence.</p>
+    </div>
+    <div class="foot"><span>Jithendra Puppala · Northeastern University · built solo in under 24 hours</span><span class="hint">navigate with <span class="kbd">←</span> <span class="kbd">→</span></span></div>
+  </section>
+
+  <!-- 2 · PROBLEM -->
+  <section class="slide">
+    <div class="eyebrow">The Problem</div>
+    <h2>Capital flows through <strong>networks</strong>, not <strong>merit</strong>.</h2>
+    <div class="grow"><div class="two">
+      <ul class="tight">
+        <li>Founders without warm intros stay invisible — their story is scattered across decks, repos, and posts nobody reads closely.</li>
+        <li>Diligence takes <b>weeks</b>; decks are unverified self-reports, and funds have no systematic way to test a single claim.</li>
+        <li>By the time a fund sees a founder clearly, equally strong founders have already given up waiting.</li>
+        <li>The next Cursor is at a hackathon right now. Today's process structurally cannot find them first.</li>
+      </ul>
+      <div class="cards">
+        <div class="card stat"><div class="n">weeks → minutes</div><div class="l">what diligence takes today vs. what this system demonstrates live</div></div>
+        <div class="card stat"><div class="n">0 claims</div><div class="l">in a typical deck that any investor systematically verifies before a first check</div></div>
+      </div>
+    </div></div>
+    <div class="foot"><span>Why it matters: great companies die for lack of a fair shot at being seen — not lack of merit.</span><span class="counter">2 / 8</span></div>
+  </section>
+
+  <!-- 3 · WHAT WE BUILT -->
+  <section class="slide">
+    <div class="eyebrow">How We Solve It</div>
+    <h2>A <strong>pipeline</strong>, not a chatbot — over a memory that never forgets.</h2>
+    <div class="grow">
+      <div class="flow">
+        <div class="step"><b>Source</b><span>Inbound: deck + name.<br>Outbound: live GitHub footprint scans. Two tracks, one funnel.</span></div>
+        <div class="arrow">→</div>
+        <div class="step"><b>Screen</b><span>Viability gate, then 3 independent axes — Founder / Market / Idea-vs-Market. Never averaged.</span></div>
+        <div class="arrow">→</div>
+        <div class="step"><b>Diligence</b><span>Adversarial validator cross-checks every claim internally + against the live web (Tavily).</span></div>
+        <div class="arrow">→</div>
+        <div class="step"><b>Decide</b><span>Evidence-backed memo, per-claim trust, guardrailed INVEST / PASS / ESCALATE.</span></div>
+      </div>
+      <div class="cards" style="grid-template-columns: repeat(3, 1fr); margin-top: 2.5vh;">
+        <div class="card stat"><div class="n">~2 min</div><div class="l">application → guardrailed decision, live, with per-stage timings (the brief's bar: 24 hours)</div></div>
+        <div class="card stat"><div class="n">25</div><div class="l">atomic claims extracted from one deck — each traced to its exact source slide</div></div>
+        <div class="card stat"><div class="n">append-only</div><div class="l">Founder Score follows the person across applications — it never resets</div></div>
+      </div>
+    </div>
+    <div class="foot"><span>Configurable thesis engine: the same founder scores differently under a different fund's lens.</span><span class="counter">3 / 8</span></div>
+  </section>
+
+  <!-- 4 · TRUST -->
+  <section class="slide">
+    <div class="eyebrow">Why It's Trustworthy</div>
+    <h2>Trust is <strong>architecture</strong>, not vibes.</h2>
+    <div class="grow"><div class="two">
+      <ul class="tight">
+        <li><b>Separation of powers:</b> the extractor cannot bless its own output — claims are born skeptical; only the validator (a <i>different model</i>) can raise trust.</li>
+        <li><b>Hallucination-proof citations by construction:</b> models cite evidence by index; UUIDs are substituted in code; uncited claims are dropped.</li>
+        <li><b>Deterministic guardrail:</b> a contradicted revenue claim makes INVEST structurally impossible — the LLM cannot override it.</li>
+        <li><b>Honest uncertainty:</b> every score carries a confidence band whose basis is displayed; gaps are declared ("Cap table: not disclosed"), never fabricated.</li>
+      </ul>
+      <div class="cards">
+        <div class="card"><span class="chip crit">FLAGGED · 0.25</span>
+          <p style="margin-top:8px">Live catch: deck claimed <b>$40K MRR</b> on slide 3 and <b>"currently pre-revenue"</b> on slide 6. Both claims flagged, exact slides cited, recommendation forced to ESCALATE.</p></div>
+        <div class="card"><span class="chip warn">EXTERNAL · TAVILY</span>
+          <p style="margin-top:8px">Deck claimed a $5.2B / 30% CAGR market. Real market reports fetched from the web disagreed — claims flagged with source URLs in the evidence drawer.</p></div>
+      </div>
+    </div></div>
+    <div class="foot"><span>Every module logs a step-level trace: recommendation → memo → claim → validator note → evidence → source.</span><span class="counter">4 / 8</span></div>
+  </section>
+
+  <!-- 5 · COLD START -->
+  <section class="slide">
+    <div class="eyebrow">Innovation · The Cold-Start Founder Score</div>
+    <h2>A <strong>credit score for founders</strong> — before they have traction.</h2>
+    <div class="grow"><div class="two">
+      <ul class="tight">
+        <li>Five footprint dimensions scored from public evidence alone: shipping velocity, technical depth, learning rate, communication, domain signal — every dimension cites its evidence.</li>
+        <li><b>Known-unknowns are first-class output:</b> the system states what it could <i>not</i> observe. Honesty is the product.</li>
+        <li><b>Convergence, demoed live:</b> a founder scanned outbound later applies inbound — same person, and the founder axis is informed by their persisted score.</li>
+        <li><b>Research backing (Brief: Area of Research 3):</b> falsifiable by design — freeze assessments at time T, rank-correlate per dimension against outcomes at T+18 months.</li>
+      </ul>
+      <div class="cards">
+        <div class="card stat"><div class="n">85.6 · 81.4 · 75.8</div><div class="l">real cold-start scores, live GitHub scans: Mitchell Hashimoto (HashiCorp), Guillermo Rauch (Vercel), Paul Copplestone (Supabase)</div></div>
+        <div class="card stat"><div class="n">16</div><div class="l">explicit known-unknowns listed when scoring a student founder — wide honest bands, not false precision</div></div>
+      </div>
+    </div></div>
+    <div class="foot"><span>This is the cold-start case the brief warns about (FAQ 10) — solved as the system's core primitive, not an afterthought.</span><span class="counter">5 / 8</span></div>
+  </section>
+
+  <!-- 6 · REALITY TEST -->
+  <section class="slide">
+    <div class="eyebrow">Proof It Works</div>
+    <h2>We ran <strong>Airbnb's actual 2008 seed deck</strong> through it.</h2>
+    <div class="grow"><div class="two">
+      <ul class="tight">
+        <li>Four real, founder-published seed decks ingested: <b>Airbnb '08, Buffer '11, Coinbase '12, UberCab '08</b> — transcribed faithfully, sources on file.</li>
+        <li>The system escalates them: decks full of unverifiable self-reports <i>should not</i> auto-invest. That is the pre-seed problem, stated by a machine.</li>
+        <li>The scam deck (guaranteed 34% monthly yields, anonymous team) died at the gate in <b>2 seconds</b>. Off-thesis decks get full analysis and an explained PASS — never a silent drop.</li>
+        <li>We hit — and fixed — the exact historical failure mode live: a gate that rejects on sector alone is how funds missed Uber. Ours is now calibrated and instructed against it.</li>
+      </ul>
+      <div class="cards">
+        <div class="card"><span class="chip warn">ESCALATE</span><p style="margin-top:8px"><b>On its own deck</b>, BrainVC flagged the "decides $100K in 24 hours" claim as low-trust needing human diligence. The trust layer has no favorites — not even us.</p></div>
+        <div class="card"><span class="chip ind">13 SEEDED + 4 REAL</span><p style="margin-top:8px">A living funnel: every stage visible — sourced, screened, in-diligence, decided, rejected-at-gate — under a thesis you can switch live.</p></div>
+      </div>
+    </div></div>
+    <div class="foot"><span>All scoring, web verification, and GitHub scans are real. Synthetic data is labeled SYNTHETIC in the evidence itself.</span><span class="counter">6 / 8</span></div>
+  </section>
+
+  <!-- 7 · BUSINESS IMPACT -->
+  <section class="slide">
+    <div class="eyebrow">Business Impact</div>
+    <h2>From <strong>relationship-gated</strong> to <strong>merit-legible</strong> capital.</h2>
+    <div class="grow">
+      <div class="cards" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="card stat"><div class="n">100×</div><div class="l">evaluation throughput per analyst: every applicant gets full diligence, not just the warm intros</div></div>
+        <div class="card stat"><div class="n">&lt; 24 h</div><div class="l">the brief's decision bar — demonstrated at ~2 minutes with instrumented per-stage timings</div></div>
+        <div class="card stat"><div class="n">1 config</div><div class="l">the thesis is data, not code — any fund plugs in sectors, stage, geography, check size, risk posture</div></div>
+      </div>
+      <div class="two" style="margin-top:3vh">
+        <div class="quote">For funds: an analyst desk that never sleeps, never forgets a founder, and shows its work on every claim.<br><br>For founders: your GitHub commit is your warm intro. Ship something once, and your next application starts from a stronger position.</div>
+        <ul class="tight">
+          <li>Sourcing layer targets the brief's stated white space — "least commercial competition today."</li>
+          <li>The memory moat compounds: every scan, application, and outcome sharpens the Founder Score corpus.</li>
+          <li>Same infrastructure extends to accelerators, angel networks, and grant programs.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot"><span>Equitable capital allocation, operationalized — the challenge's own north star.</span><span class="counter">7 / 8</span></div>
+  </section>
+
+  <!-- 8 · CRITERIA MAP + CLOSE -->
+  <section class="slide">
+    <div class="eyebrow">Why It Wins · Judging Criteria</div>
+    <h2>Built <strong>against the rubric</strong>, end to end.</h2>
+    <div class="grow">
+      <table class="map">
+        <tr><td>Data Architecture <span class="mono">30%</span></td><td>Append-only Memory with provenance on everything; content-hash dedup; entity resolution; cold-start scoring as a core primitive — not generic ingestion.</td></tr>
+        <tr><td>Investment Utility <span class="mono">30%</span></td><td>A recommendation a human can act on in minutes, with the memo, evidence, and declared gaps to defend it — plus instrumented signal-to-decision speed.</td></tr>
+        <tr><td>Analysis &amp; Trust <span class="mono">25%</span></td><td>Per-claim Trust Scores, adversarial validator with live web verification, contradiction flags, hallucination-proof citations, honest confidence bands.</td></tr>
+        <tr><td>UX <span class="mono">15%</span></td><td>Investor-grade five-screen app: ranked pipeline, click-through evidence drawers, thesis panel, voice briefing (ElevenLabs) — no technical support needed.</td></tr>
+      </table>
+      <p class="lede" style="margin-top:3.5vh; font-size: clamp(16px,1.6vw,21px); color: var(--ink);">
+        The system knows what it knows, says what it doesn't,<br>and refuses to invest when the evidence contradicts itself.<br>
+        <b>That's the VC brain.</b>
+      </p>
+    </div>
+    <div class="foot"><span>BrainVC · FastAPI · GPT-5.x · Tavily · ElevenLabs · Lovable · built solo in &lt;24h</span><span class="counter">8 / 8</span></div>
+  </section>
+
+</div>
+<script>
+  const slides = [...document.querySelectorAll(".slide")];
+  let i = Math.max(0, Math.min(slides.length - 1,
+    (parseInt(new URLSearchParams(location.search).get("slide")) || 1) - 1));
+  function show(n) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach((s, j) => s.classList.toggle("active", j === i));
+  }
+  show(i);
+  addEventListener("keydown", (e) => {
+    if (["ArrowRight", " ", "PageDown"].includes(e.key)) show(i + 1);
+    if (["ArrowLeft", "PageUp"].includes(e.key)) show(i - 1);
+  });
+  addEventListener("click", (e) => { if (!e.target.closest("a")) show(i + 1); });
+</script>
+</body>
+</html>

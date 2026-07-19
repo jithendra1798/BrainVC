@@ -1,0 +1,10 @@
+{
+  "name": "Maschmeyer demo preset",
+  "sectors": ["ai-native enterprise software"],
+  "stages": ["pre_seed", "seed"],
+  "geographies": ["US"],
+  "check_size_usd": 100000,
+  "ownership_target_pct": null,
+  "risk_posture": "back_potential_over_traction",
+  "axis_weights": {"founder": 1.4, "market": 1.0, "idea_vs_market": 0.9}
+}
