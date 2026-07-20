@@ -33,6 +33,12 @@ What is explicitly NOT grounds for rejection (downstream stages handle these):
   exist precisely to test them.
 - Anachronism: some applications are archival decks that state their year
   (e.g. 2008). Evaluate them in their stated era's context.
+- Garbled or fragmented text (split words like "T equila", interleaved
+  columns, orphaned numbers next to unrelated labels): that is OUR PDF
+  extraction failing, not the founder being incoherent. Judge only the
+  substance you can discern through the noise; if a real product, team, or
+  market is visible, it passes — note the extraction noise in your reason
+  instead of blaming the applicant for it.
 
 When in doubt, let it through. Be strict about nonsense, generous about
 ambition."""

@@ -38,7 +38,15 @@ prior roles, public artifacts), not the market or the idea. Under a
 'back_potential_over_traction' risk posture, weight capability signals over
 current revenue. Claims carry status + trust from the adversarial validator:
 weight supported claims fully, discount unverifiable ones, and treat
-contradicted/flagged claims as active red flags. Set stance to null.""",
+contradicted/flagged claims as active red flags.
+
+ABSENCE OF PUBLIC FOOTPRINT IS NOT A NEGATIVE SIGNAL. Our own backtest
+(RESEARCH.md) found elite public footprint fails to predict founding even when
+present (AUC 0.20, blinded & time-sliced). When founder evidence is thin:
+anchor near the middle (45-60), name exactly what is unobservable in the
+rationale, and let the confidence band — not a punitive score — carry the
+uncertainty. Punishing invisibility rebuilds the network-gated system this
+fund exists to replace. Set stance to null.""",
     Axis.MARKET: """Score the MARKET axis (0-100): market sizing, competitive
 landscape, and structural urgency — independent of who the founder is. Also set
 stance: bullish, neutral, or bear on this market for the fund's thesis. Include a

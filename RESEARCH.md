@@ -154,3 +154,61 @@ byte-identical to the one running in outbound sourcing. Anyone can re-run the
 study (`cd backend && uv run python research/backtest.py`) or extend the cohort
 by editing one table. A fund adopting BrainVC inherits not just a score, but
 the instrument to keep checking whether the score is real.
+
+## 7. Postscript — the founder with NO public footprint
+
+The hardest case is the founder this challenge exists for: no GitHub, no
+papers, no network — just an application and an idea. The backtest is the
+empirical justification for how the system treats them:
+
+> If elite public footprint fails to predict founding even when present
+> (AUC 0.20), then its ABSENCE cannot justify a penalty. A system that
+> punishes invisibility has rebuilt the network-gated status quo with
+> extra steps.
+
+Three mechanisms, all in code and all traceable:
+
+1. **The idea carries its own axes.** Market and Idea-vs-Market are scored
+   from the application content alone, and the three axes are never averaged
+   (brief FAQ 5) — so a thin founder axis cannot silently drag a strong idea
+   into a PASS. The disagreement between axes is surfaced, not blended away.
+2. **Uncertainty is projected, not faked.** With thin founder evidence the
+   founder axis anchors mid-scale and the confidence band — driven by evidence
+   count, source diversity, and validator trust — carries the width (up to
+   ±21 points, basis string shown in the UI). The axis prompt cites this
+   study by name as the reason absence-of-footprint must not score as
+   weakness.
+3. **Wide band + strong idea → escalate WITH asks.** The memo names the 2-3
+   cheapest pieces of evidence that would most change the decision (a
+   20-minute technical call, a demo, one reference) — value-of-information
+   routing instead of false precision. The $100K-in-24h promise is kept by
+   making the human step small and specific, not by pretending certainty.
+
+**Case study from our own pipeline.** SNOVA — a real student deck
+(biomaterials from agave waste), zero-footprint founder — was initially
+rejected at the gate for "incoherent claims." The trace log shows why:
+our PDF extraction scrambled the slide layout ("T equila"), and the gate
+blamed the founder's coherence for our parsing artifact. The invisible
+founder's failure mode is usually not malice; it is infrastructure quietly
+attributing its own noise to the applicant. The gate now classifies
+extraction artifacts as a data-quality problem, judges only the discernible
+substance, and the founder-axis and memo rules above took effect the same
+day.
+
+Re-run after the fix, the same deck went: **gate PASS** → full three-axis
+analysis — market **63 [45–81]** (the idea earned real credit), founder
+**42 [24–60]** (wide, honest band) → **ESCALATE_TO_HUMAN** with every issue
+cited by claim ID and 12 explicit gaps ("Cap table: not disclosed", …).
+Note the distinction the system maintained: the founder axis sits below
+neutral not because the founder is invisible, but because the validator
+found actively *contradicted* claims (the sole revenue figure, the segment
+sizing) — contradiction is evidence, absence is not. The founder is no
+longer told "you're incoherent, rejected"; they're told exactly which claims
+failed verification and what's missing. That is the difference between a
+gate and a wall.
+
+**Research extensions this opens (Area of Research 1):** (a) *coverage
+testing* — freeze each confidence band at decision time, check later what
+fraction of outcomes landed inside; recalibrate widths on the miss pattern;
+(b) *ask-efficiency* — track which escalation asks most shrink the founder
+band per unit of founder effort, and rank asks by measured information value.

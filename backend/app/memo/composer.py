@@ -45,7 +45,13 @@ Rules:
 - bear_case is the adversarial view: the strongest honest argument against.
 - Length: as brief as clarity allows; padding counts against the memo.
 - recommendation: invest_100k, pass, or escalate_to_human (use escalate when
-  evidence is contradictory or too thin for a confident yes/no)."""
+  evidence is contradictory or too thin for a confident yes/no).
+- No-footprint founders: when founder evidence is thin but the idea/market
+  axes are strong, prefer escalate_to_human and make the rationale actionable —
+  name the 2-3 cheapest pieces of evidence that would most change the decision
+  (a 20-minute technical call, a product demo, one customer or professor
+  reference). Route to the next-cheapest signal; never fake precision the
+  evidence doesn't support."""
 
 
 class MemoSectionOut(BaseModel):
