@@ -11,6 +11,8 @@ Built for the Hack-Nation 6th Global AI Hackathon · Challenge 02 (Maschmeyer Gr
 **Docs:** [ARCHITECTURE.md](ARCHITECTURE.md) (contracts & module boundaries — read first) ·
 [DECISIONS.md](DECISIONS.md) · [DEMO.md](DEMO.md) (run-of-show) ·
 [REAL_DECKS.md](REAL_DECKS.md) (real-deck test provenance) ·
+[RESEARCH.md](RESEARCH.md) (**time-machine backtest** — blinded, time-sliced
+footprint→founding study, Area of Research 3) ·
 [PITCH_DECK.html](PITCH_DECK.html) (presentation — open in a browser)
 
 ## Setup from clone

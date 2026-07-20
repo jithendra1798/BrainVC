@@ -142,7 +142,7 @@
         <div class="card stat"><div class="n">0 claims</div><div class="l">in a typical deck that any investor systematically verifies before a first check</div></div>
       </div>
     </div></div>
-    <div class="foot"><span>Why it matters: great companies die for lack of a fair shot at being seen — not lack of merit.</span><span class="counter">2 / 8</span></div>
+    <div class="foot"><span>Why it matters: great companies die for lack of a fair shot at being seen — not lack of merit.</span><span class="counter">2 / 9</span></div>
   </section>
 
   <!-- 3 · WHAT WE BUILT -->
@@ -165,7 +165,7 @@
         <div class="card stat"><div class="n">append-only</div><div class="l">Founder Score follows the person across applications — it never resets</div></div>
       </div>
     </div>
-    <div class="foot"><span>Configurable thesis engine: the same founder scores differently under a different fund's lens.</span><span class="counter">3 / 8</span></div>
+    <div class="foot"><span>Configurable thesis engine: the same founder scores differently under a different fund's lens.</span><span class="counter">3 / 9</span></div>
   </section>
 
   <!-- 4 · TRUST -->
@@ -186,7 +186,7 @@
           <p style="margin-top:8px">Deck claimed a $5.2B / 30% CAGR market. Real market reports fetched from the web disagreed — claims flagged with source URLs in the evidence drawer.</p></div>
       </div>
     </div></div>
-    <div class="foot"><span>Every module logs a step-level trace: recommendation → memo → claim → validator note → evidence → source.</span><span class="counter">4 / 8</span></div>
+    <div class="foot"><span>Every module logs a step-level trace: recommendation → memo → claim → validator note → evidence → source.</span><span class="counter">4 / 9</span></div>
   </section>
 
   <!-- 5 · COLD START -->
@@ -198,17 +198,37 @@
         <li>Five footprint dimensions scored from public evidence alone: shipping velocity, technical depth, learning rate, communication, domain signal — every dimension cites its evidence.</li>
         <li><b>Known-unknowns are first-class output:</b> the system states what it could <i>not</i> observe. Honesty is the product.</li>
         <li><b>Convergence, demoed live:</b> a founder scanned outbound later applies inbound — same person, and the founder axis is informed by their persisted score.</li>
-        <li><b>Research backing (Brief: Area of Research 3):</b> falsifiable by design — freeze assessments at time T, rank-correlate per dimension against outcomes at T+18 months.</li>
+        <li><b>Research backing (Brief: Area of Research 3):</b> not a promise — we ran the falsification study. Next slide.</li>
       </ul>
       <div class="cards">
         <div class="card stat"><div class="n">85.6 · 81.4 · 75.8</div><div class="l">real cold-start scores, live GitHub scans: Mitchell Hashimoto (HashiCorp), Guillermo Rauch (Vercel), Paul Copplestone (Supabase)</div></div>
         <div class="card stat"><div class="n">16</div><div class="l">explicit known-unknowns listed when scoring a student founder — wide honest bands, not false precision</div></div>
       </div>
     </div></div>
-    <div class="foot"><span>This is the cold-start case the brief warns about (FAQ 10) — solved as the system's core primitive, not an afterthought.</span><span class="counter">5 / 8</span></div>
+    <div class="foot"><span>This is the cold-start case the brief warns about (FAQ 10) — solved as the system's core primitive, not an afterthought.</span><span class="counter">5 / 9</span></div>
   </section>
 
-  <!-- 6 · REALITY TEST -->
+
+  <!-- 6 · RESEARCH: TIME-MACHINE BACKTEST -->
+  <section class="slide">
+    <div class="eyebrow">Research · Area of Research 3, Actually Attempted</div>
+    <h2>We tried to <strong>falsify our own scorer</strong> — and published the null.</h2>
+    <div class="grow"><div class="two">
+      <ul class="tight">
+        <li><b>Time-machine backtest:</b> 5 eventual founders (HashiCorp, Vercel, Supabase, Deno, Astral) vs 5 elite non-founder controls — scored <i>only</i> on evidence created before each founding date, names blinded, exact permutation test (all 252 label assignments).</li>
+        <li><b>Finding — a robust null:</b> AUC 0.20, p = 0.96. Elite builder capability does not predict who founds. At the elite tail, founding is a choice, not a capability threshold.</li>
+        <li><b>Hindsight, quantified:</b> adding current-day star counts inflates every score (~+5; Rauch +10 from socket.io fame) without changing the ranking. Pipelines that score founders on today's footprint inherit this invisibly.</li>
+        <li><b>Consequence, already in the architecture:</b> the cold-start score is a capability screen — one input into the Founder axis, never the axis itself. A sourcing system must not become a GitHub-stars fund.</li>
+      </ul>
+      <div class="cards">
+        <div class="card stat"><div class="n">AUC 0.20 · p 0.956</div><div class="l">founders vs hard controls, blinded &amp; time-sliced — reported straight, not p-hacked (RESEARCH.md)</div></div>
+        <div class="card stat"><div class="n">1 command</div><div class="l">fully reproducible: <code>uv run python research/backtest.py</code> — the evaluation harness ships with the product</div></div>
+      </div>
+    </div></div>
+    <div class="foot"><span>"A memo that marks its own gaps is more trustworthy" — the brief's rule, applied to our own product.</span><span class="counter">6 / 9</span></div>
+  </section>
+
+  <!-- 7 · REALITY TEST -->
   <section class="slide">
     <div class="eyebrow">Proof It Works</div>
     <h2>We ran <strong>Airbnb's actual 2008 seed deck</strong> through it.</h2>
@@ -224,7 +244,7 @@
         <div class="card"><span class="chip ind">13 SEEDED + 4 REAL</span><p style="margin-top:8px">A living funnel: every stage visible — sourced, screened, in-diligence, decided, rejected-at-gate — under a thesis you can switch live.</p></div>
       </div>
     </div></div>
-    <div class="foot"><span>All scoring, web verification, and GitHub scans are real. Synthetic data is labeled SYNTHETIC in the evidence itself.</span><span class="counter">6 / 8</span></div>
+    <div class="foot"><span>All scoring, web verification, and GitHub scans are real. Synthetic data is labeled SYNTHETIC in the evidence itself.</span><span class="counter">7 / 9</span></div>
   </section>
 
   <!-- 7 · BUSINESS IMPACT -->
@@ -246,7 +266,7 @@
         </ul>
       </div>
     </div>
-    <div class="foot"><span>Equitable capital allocation, operationalized — the challenge's own north star.</span><span class="counter">7 / 8</span></div>
+    <div class="foot"><span>Equitable capital allocation, operationalized — the challenge's own north star.</span><span class="counter">8 / 9</span></div>
   </section>
 
   <!-- 8 · CRITERIA MAP + CLOSE -->
@@ -265,7 +285,7 @@
         <b>That's the VC brain.</b>
       </p>
     </div>
-    <div class="foot"><span>BrainVC · FastAPI · GPT-5.x · Tavily · ElevenLabs · Lovable · built solo in &lt;24h</span><span class="counter">8 / 8</span></div>
+    <div class="foot"><span>BrainVC · FastAPI · GPT-5.x · Tavily · ElevenLabs · Lovable · built solo in &lt;24h</span><span class="counter">9 / 9</span></div>
   </section>
 
 </div>

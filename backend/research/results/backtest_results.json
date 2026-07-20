@@ -1,0 +1,736 @@
+{
+  "model": "gpt-5.5",
+  "ran_at": "2026-07-20T08:16:05.767257+00:00",
+  "design": "time-sliced pre-cutoff repos, name-blinded, hard controls",
+  "primary_no_stars": {
+    "rows": [
+      {
+        "handle": "mitchellh",
+        "blind_id": "Candidate F08",
+        "cutoff": "2012-10-01",
+        "label": 1,
+        "note": "HashiCorp (founded 2012-11; IPO 2021)",
+        "n_repos_pre_cutoff": 10,
+        "score": 65.0,
+        "band": [
+          41.8,
+          88.2
+        ],
+        "dimensions": {
+          "shipping_velocity": 72.0,
+          "technical_depth": 68.0,
+          "learning_rate": 63.0,
+          "public_communication": 48.0,
+          "domain_signal": 74.0
+        },
+        "known_unknowns": [
+          "No public handles were provided, so identity continuity across platforms is unverified.",
+          "No commit history, release history, package publication, or maintenance cadence is visible.",
+          "No repository contents, tests, architecture, or implementation quality are available beyond names, languages, descriptions, and creation dates.",
+          "No README/documentation quality is observable beyond short repo descriptions.",
+          "No stars, forks, downloads, users, adoption, or other traction signals are provided, and traction should not be inferred.",
+          "No revenue, customer, or company-building evidence is provided.",
+          "No collaboration signals are visible: contributors, pull requests, issues, code review, or community interaction are unknown.",
+          "No employment history, education, or prior founder history is provided.",
+          "No recent activity after 2012 is visible in the provided evidence, so current technical sharpness and persistence are unknown.",
+          "No evidence of deployed production systems or operational ownership is visible.",
+          "No evidence of design/product sense beyond developer-tool repository naming and descriptions is visible.",
+          "No evidence of fundraising, recruiting, leadership, or team-building ability is visible.",
+          "No security, scalability, or systems-performance details can be verified from the provided footprint.",
+          "The depth of the libssh2 Ruby binding work is unclear without code inspection.",
+          "The Vagrant downloads website relationship to any broader Vagrant project or ownership is unverified from the provided evidence alone."
+        ]
+      },
+      {
+        "handle": "rauchg",
+        "blind_id": "Candidate F04",
+        "cutoff": "2015-10-01",
+        "label": 1,
+        "note": "Vercel/ZEIT (founded 2015-11; >$1B). Prior founder (LearnBoost) \u2014 noted as contamination.",
+        "n_repos_pre_cutoff": 10,
+        "score": 65.0,
+        "band": [
+          41.8,
+          88.2
+        ],
+        "dimensions": {
+          "shipping_velocity": 72.0,
+          "technical_depth": 67.0,
+          "learning_rate": 64.0,
+          "public_communication": 56.0,
+          "domain_signal": 66.0
+        },
+        "known_unknowns": [
+          "No public traction, user adoption, downloads, stars, forks, or usage metrics were provided.",
+          "No commit history, contribution frequency, or maintenance history beyond repository creation dates was provided.",
+          "No code contents were available, so implementation quality, architecture, testing, and complexity could not be directly assessed.",
+          "No README contents, documentation, blog posts, talks, or long-form technical writing were provided.",
+          "No collaboration signals were provided, including issues, pull requests, co-maintainers, or community engagement.",
+          "Employment history, education, and prior startup experience are unverified.",
+          "No evidence after April 2015 was provided, so current/recent shipping velocity is unknown.",
+          "No evidence of revenue, customer discovery, product judgment, or go-to-market ability was provided.",
+          "No evidence of depth in a specific industry domain beyond developer tools, JavaScript, real-time web, and community tooling was provided.",
+          "No evidence of leadership, hiring, fundraising, or operational ability was provided.",
+          "No evidence of production deployments, reliability work, security practices, or scalability outcomes was provided.",
+          "No evidence indicates whether these repositories were finished, maintained, abandoned, or widely used beyond their descriptions."
+        ]
+      },
+      {
+        "handle": "kiwicopple",
+        "blind_id": "Candidate F03",
+        "cutoff": "2019-12-01",
+        "label": 1,
+        "note": "Supabase (YC S20, founded 2020-01; >$1B)",
+        "n_repos_pre_cutoff": 10,
+        "score": 54.4,
+        "band": [
+          31.2,
+          77.6
+        ],
+        "dimensions": {
+          "shipping_velocity": 62.0,
+          "technical_depth": 54.0,
+          "learning_rate": 57.0,
+          "public_communication": 44.0,
+          "domain_signal": 55.0
+        },
+        "known_unknowns": [
+          "No public handles were provided beyond anonymized repo evidence.",
+          "No commit history, contribution frequency, or maintenance activity was provided.",
+          "No evidence of activity after late 2019 was provided.",
+          "No README contents, documentation quality, or code samples were available.",
+          "No verification that live URLs are still online or were ever fully functional.",
+          "No usage, traction, revenue, customers, or user feedback was observable.",
+          "No stars, forks, issues, pull requests, or community adoption signals were provided.",
+          "No collaboration signals were observable; unclear whether projects were solo or team-built.",
+          "No employment history, education, or prior domain experience was provided.",
+          "No evidence of production deployments, reliability, scalability, tests, or security practices was available.",
+          "No long-form public writing, blog posts, talks, or technical explanations were provided.",
+          "No information on current focus, current technical ability, or founder motivation was available.",
+          "No evidence of fundraising, company formation, or startup operating experience was provided."
+        ]
+      },
+      {
+        "handle": "ry",
+        "blind_id": "Candidate F09",
+        "cutoff": "2021-02-01",
+        "label": 1,
+        "note": "Deno Land (founded 2021-03; Sequoia Series A 2022)",
+        "n_repos_pre_cutoff": 10,
+        "score": 56.6,
+        "band": [
+          33.4,
+          79.8
+        ],
+        "dimensions": {
+          "shipping_velocity": 58.0,
+          "technical_depth": 70.0,
+          "learning_rate": 66.0,
+          "public_communication": 32.0,
+          "domain_signal": 57.0
+        },
+        "known_unknowns": [
+          "No public handles were provided beyond the anonymized candidate label.",
+          "No commit history, commit frequency, or recency beyond repository creation dates was observable.",
+          "No evidence of activity after 2020 was provided.",
+          "No repository contents were available, so code quality, architecture, tests, documentation, and completeness are unknown.",
+          "No clear signal on whether repositories are original work, forks, mirrors, coursework, or partial experiments.",
+          "No release/package/deployment evidence was provided.",
+          "No traction, users, stars, forks, issues, or external adoption signals were provided.",
+          "No collaboration signals such as pull requests, code reviews, contributors, or team projects were observable.",
+          "No employment history, education history, or affiliation is verified; the Berkeley EECS151 link may indicate coursework but is not sufficient to verify enrollment or role.",
+          "No public writing, blog posts, talks, demos, or long-form technical explanations were provided.",
+          "No README quality or inline documentation quality was observable from the evidence summaries.",
+          "No evidence of product sense, customer discovery, revenue, or market selection was provided.",
+          "No evidence of leadership, recruiting ability, or founder-specific execution outside code artifacts was provided.",
+          "No licensing, maintenance history, security practices, or CI/CD practices were observable."
+        ]
+      },
+      {
+        "handle": "charliermarsh",
+        "blind_id": "Candidate F06",
+        "cutoff": "2023-03-01",
+        "label": 1,
+        "note": "Astral (announced 2023-04, $4M seed; ruff pre-dates company)",
+        "n_repos_pre_cutoff": 10,
+        "score": 62.0,
+        "band": [
+          38.8,
+          85.2
+        ],
+        "dimensions": {
+          "shipping_velocity": 58.0,
+          "technical_depth": 72.0,
+          "learning_rate": 67.0,
+          "public_communication": 52.0,
+          "domain_signal": 61.0
+        },
+        "known_unknowns": [
+          "No public traction, users, revenue, stars, forks, downloads, or adoption metrics provided.",
+          "No commit history, release history, issue activity, or maintenance cadence observable from the evidence.",
+          "No README contents, documentation quality, examples, demos, screenshots, or test coverage visible.",
+          "No code-level review possible; implementation quality, complexity, and originality are unverified.",
+          "No evidence of whether repositories were completed, abandoned, forked, or experimental stubs.",
+          "No collaboration signals such as pull requests, code reviews, contributors, or open-source community interaction.",
+          "No employment history, education history beyond implied Princeton CS notes, or role/responsibility verification.",
+          "No public writing, blog posts, talks, papers, or social communication beyond repository descriptions and notes repo metadata.",
+          "No evidence of customer discovery, product sense, go-to-market ability, or founder-market fit.",
+          "No evidence of leadership, team-building, hiring, fundraising, or operational execution.",
+          "No evidence about current focus after 2022 or whether the founder is still actively building.",
+          "No handles were provided, so cross-platform footprint could not be assessed.",
+          "No security, scalability, performance, or production deployment evidence available.",
+          "No licensing, packaging, CI status, or dependency health information provided."
+        ]
+      },
+      {
+        "handle": "antirez",
+        "blind_id": "Candidate F07",
+        "cutoff": "2012-10-01",
+        "label": 0,
+        "note": "Redis creator; joined Redis Labs as employee, never founded",
+        "n_repos_pre_cutoff": 10,
+        "score": 72.4,
+        "band": [
+          49.2,
+          95.6
+        ],
+        "dimensions": {
+          "shipping_velocity": 72.0,
+          "technical_depth": 86.0,
+          "learning_rate": 76.0,
+          "public_communication": 56.0,
+          "domain_signal": 72.0
+        },
+        "known_unknowns": [
+          "No public handles were provided, so identity linkage across platforms is unverified.",
+          "No evidence of work after 2012 is provided; current shipping velocity and recent technical trajectory are unknown.",
+          "No commit history, release history, or maintenance activity is visible, so completion quality and sustained ownership are uncertain.",
+          "No README contents, documentation, blog posts, talks, or long-form technical writing are provided beyond short repository descriptions.",
+          "No stars, forks, package downloads, user adoption, production usage, or traction metrics are provided.",
+          "No issue/PR history or collaboration signals are provided.",
+          "No employment history, education, or prior company context is provided.",
+          "No evidence of whether the repositories are original work, forks, mirrors, or ports beyond the listed metadata.",
+          "No code contents are provided, so implementation quality, architecture, testing, and security practices cannot be directly assessed.",
+          "No evidence of founder-specific commercial judgment, customer discovery, sales ability, or market selection is available.",
+          "No team-building or leadership signals are observable.",
+          "No deployment or operational track record is observable."
+        ]
+      },
+      {
+        "handle": "sindresorhus",
+        "blind_id": "Candidate F10",
+        "cutoff": "2015-10-01",
+        "label": 0,
+        "note": "Full-time OSS, sponsorship-funded; never founded",
+        "n_repos_pre_cutoff": 10,
+        "score": 63.0,
+        "band": [
+          39.8,
+          86.2
+        ],
+        "dimensions": {
+          "shipping_velocity": 72.0,
+          "technical_depth": 66.0,
+          "learning_rate": 52.0,
+          "public_communication": 57.0,
+          "domain_signal": 68.0
+        },
+        "known_unknowns": [
+          "No public code contents were provided, so implementation quality, complexity, testing, and maintainability cannot be directly assessed.",
+          "No README contents, documentation examples, tutorials, blog posts, talks, or long-form public writing were provided.",
+          "No commit history was provided, so iteration cadence, maintenance behavior, and whether repositories were completed versus merely initialized are unknown.",
+          "No evidence after September 2015 was provided, so recent shipping velocity and current technical interests are unknown.",
+          "No stars, downloads, package usage, users, revenue, or other traction metrics were provided.",
+          "No issue, pull request, code review, or collaboration signals were provided.",
+          "No employment history, education, or prior startup experience was provided or verified.",
+          "No information about whether these repositories are original work, forks, mirrors, or imported projects was provided.",
+          "No evidence of production deployment, operational responsibility, scalability work, or incident handling was provided.",
+          "No evidence of work outside JavaScript/TypeScript/Node was provided, so cross-domain technical range is unclear.",
+          "No direct evidence of founder-market fit, customer discovery, sales ability, or commercial judgment was provided.",
+          "No biographical profile, handles, personal website, or social presence were provided beyond the repository evidence."
+        ]
+      },
+      {
+        "handle": "kentcdodds",
+        "blind_id": "Candidate F05",
+        "cutoff": "2019-12-01",
+        "label": 0,
+        "note": "Educator; solo businesses, not VC-backed",
+        "n_repos_pre_cutoff": 10,
+        "score": 57.8,
+        "band": [
+          34.6,
+          81.0
+        ],
+        "dimensions": {
+          "shipping_velocity": 61.0,
+          "technical_depth": 48.0,
+          "learning_rate": 50.0,
+          "public_communication": 63.0,
+          "domain_signal": 67.0
+        },
+        "known_unknowns": [
+          "No public activity observed after 2019-10-11, so current shipping velocity is unknown.",
+          "No commit history, commit frequency, or update history was provided beyond repository creation dates.",
+          "No repository contents, README quality, tests, architecture, or implementation complexity were provided.",
+          "No stars, forks, issues, pull requests, package downloads, or adoption signals were provided.",
+          "No evidence of deployed products, users, revenue, or traction was provided.",
+          "No evidence of contribution to external open-source projects was provided.",
+          "No collaboration signals, co-maintainers, code review activity, or team work were observable.",
+          "No employment history, education history, or credentials were provided or verified.",
+          "No long-form public writing, blog posts, documentation excerpts, or talk recordings were provided.",
+          "No evidence of research papers, systems-level work, infrastructure work, or non-frontend technical depth was provided.",
+          "No identity/handle information was provided beyond the candidate label, so broader public footprint could not be linked.",
+          "No evidence of founder-market fit, customer discovery, sales ability, or business execution was observable."
+        ]
+      },
+      {
+        "handle": "hadley",
+        "blind_id": "Candidate F01",
+        "cutoff": "2021-02-01",
+        "label": 0,
+        "note": "RStudio/Posit employee; never founded",
+        "n_repos_pre_cutoff": 10,
+        "score": 71.6,
+        "band": [
+          48.4,
+          94.8
+        ],
+        "dimensions": {
+          "shipping_velocity": 68.0,
+          "technical_depth": 74.0,
+          "learning_rate": 70.0,
+          "public_communication": 60.0,
+          "domain_signal": 86.0
+        },
+        "known_unknowns": [
+          "No code contents were provided, so implementation quality, complexity, tests, and maintainability are unverified.",
+          "No commit history was provided, so actual shipping cadence, iteration speed, and recency beyond repository creation dates are unknown.",
+          "No release/package publication information was provided, so it is unclear whether these repositories were finished, distributed, or adopted.",
+          "No stars, forks, downloads, issues, or dependency usage were provided; traction and user impact are unknown.",
+          "No README or documentation contents were provided beyond short repository descriptions.",
+          "No public writing, blog posts, talks, or detailed explanations were provided, except the existence of a workshop repository.",
+          "No collaboration signals were provided, including pull requests, code reviews, contributors, or community maintenance behavior.",
+          "No employment history, education, or institutional affiliation was provided or verified.",
+          "No private work, commercial projects, or startup-building evidence was provided.",
+          "No evidence of revenue, customers, or market validation was provided, by design.",
+          "No evidence after 2020 is available, so current activity and current technical direction are unknown.",
+          "Repository descriptions alone may not distinguish experiments from production-quality artifacts.",
+          "Handles are empty, so identity linkage across platforms could not be assessed."
+        ]
+      },
+      {
+        "handle": "sharkdp",
+        "blind_id": "Candidate F02",
+        "cutoff": "2023-03-01",
+        "label": 0,
+        "note": "fd/bat/hyperfine author; joined Astral 2023 as employee, not founder",
+        "n_repos_pre_cutoff": 10,
+        "score": 72.2,
+        "band": [
+          49.0,
+          95.4
+        ],
+        "dimensions": {
+          "shipping_velocity": 70.0,
+          "technical_depth": 82.0,
+          "learning_rate": 76.0,
+          "public_communication": 55.0,
+          "domain_signal": 78.0
+        },
+        "known_unknowns": [
+          "No public handles were provided, so identity resolution and broader footprint may be incomplete.",
+          "No commit history, commit frequency, or maintenance activity beyond repository creation/observation dates was provided.",
+          "No evidence of activity after 2022-07-23, so current recency and ongoing shipping velocity are unknown.",
+          "No README contents, documentation quality, examples, or API docs were provided.",
+          "No code contents were provided, so implementation quality, architecture, test coverage, and completeness are unverified.",
+          "No release history, package publication, binaries, demos, or deployment evidence was provided.",
+          "No stars, forks, issues, pull requests, contributors, or community usage signals were provided.",
+          "No traction, revenue, users, downloads, or customer adoption signals were provided.",
+          "No collaboration signals are visible, including whether the candidate works well with contributors or teams.",
+          "No employment history, education, research background, or prior startup experience was provided.",
+          "No public writing, blog posts, talks, videos, or tutorials were provided beyond repository descriptions.",
+          "No evidence of domain expertise in scientific computing beyond the project descriptions themselves.",
+          "No information about founder intent, product vision, market selection, or business model was provided.",
+          "No evidence of security, reliability, production operations, or scaling experience was provided.",
+          "No evidence of design/product sense beyond developer-tool project choices and repository descriptions.",
+          "No verification that repositories were completed, actively maintained, or used by others."
+        ]
+      }
+    ],
+    "stats": {
+      "founder_mean": 60.6,
+      "control_mean": 67.4,
+      "gap": -6.8,
+      "auc": 0.2,
+      "exact_p_one_sided": 0.956
+    }
+  },
+  "sensitivity_with_stars": {
+    "rows": [
+      {
+        "handle": "mitchellh",
+        "blind_id": "Candidate F08",
+        "cutoff": "2012-10-01",
+        "label": 1,
+        "note": "HashiCorp (founded 2012-11; IPO 2021)",
+        "n_repos_pre_cutoff": 10,
+        "score": 65.6,
+        "band": [
+          42.4,
+          88.8
+        ],
+        "dimensions": {
+          "shipping_velocity": 72.0,
+          "technical_depth": 69.0,
+          "learning_rate": 63.0,
+          "public_communication": 48.0,
+          "domain_signal": 76.0
+        },
+        "known_unknowns": [
+          "No public handles were provided, so identity linkage across platforms cannot be verified.",
+          "No commit history, contribution frequency, or maintenance duration is visible beyond repository creation dates.",
+          "No README contents, documentation quality, examples, or API design details are provided.",
+          "No source code contents are provided, so implementation complexity and code quality cannot be directly inspected.",
+          "No evidence of production usage, package downloads, dependency adoption, or user feedback is available.",
+          "Stars are current-day values and may post-date the observed cutoff, so they are weak evidence of contemporaneous reception.",
+          "No collaboration signals are visible, such as pull requests, issues, co-maintainers, code review, or community interaction.",
+          "No employment history, education, or prior domain experience is provided or verified.",
+          "No evidence of revenue, traction, customers, or startup execution is included.",
+          "No public writing, talks, blog posts, or long-form explanations are available in the evidence.",
+          "No evidence of later work after June 2012, so longer-term trajectory is unknown.",
+          "No information on whether these repositories were completed, maintained, abandoned, or used by others beyond their descriptions.",
+          "No evidence of leadership, hiring, fundraising, sales, or operational ability is available.",
+          "No evidence of security, scalability, or production reliability work beyond the repo topics can be confirmed."
+        ]
+      },
+      {
+        "handle": "rauchg",
+        "blind_id": "Candidate F04",
+        "cutoff": "2015-10-01",
+        "label": 1,
+        "note": "Vercel/ZEIT (founded 2015-11; >$1B). Prior founder (LearnBoost) \u2014 noted as contamination.",
+        "n_repos_pre_cutoff": 10,
+        "score": 75.0,
+        "band": [
+          51.8,
+          98.2
+        ],
+        "dimensions": {
+          "shipping_velocity": 82.0,
+          "technical_depth": 78.0,
+          "learning_rate": 74.0,
+          "public_communication": 62.0,
+          "domain_signal": 79.0
+        },
+        "known_unknowns": [
+          "No public handles, profile bio, or identity context were provided beyond the candidate label.",
+          "No repository contents, commit history, commit frequency, or recency beyond creation dates were provided.",
+          "No README bodies, documentation quality, examples, or installation instructions were provided; only repository names/descriptions/languages are visible.",
+          "No issue, pull request, code review, or maintainer activity is visible, so collaboration and responsiveness cannot be assessed.",
+          "No employment history, education, prior startups, or domain-specific professional background is verified.",
+          "No public writing, talks, conference presentations, long-form technical explanations, or social posts are provided.",
+          "No evidence after April 2015 is included, so current activity and long-term consistency are unknown.",
+          "Stars are explicitly current-day values and may post-date the observed dates, so they were treated as weak evidence and not as direct proof of traction at the time.",
+          "No user traction, revenue, customer adoption, downloads, package usage, or production deployment evidence is provided.",
+          "No information on whether the candidate was sole author, primary maintainer, contributor, or fork owner for each repository is provided.",
+          "No code quality, test coverage, security posture, scalability, or architectural sophistication can be directly inspected from the metadata.",
+          "No evidence of fundraising, sales ability, hiring ability, or founder-market fit beyond the technical/public repo footprint is available."
+        ]
+      },
+      {
+        "handle": "kiwicopple",
+        "blind_id": "Candidate F03",
+        "cutoff": "2019-12-01",
+        "label": 1,
+        "note": "Supabase (YC S20, founded 2020-01; >$1B)",
+        "n_repos_pre_cutoff": 10,
+        "score": 57.8,
+        "band": [
+          34.6,
+          81.0
+        ],
+        "dimensions": {
+          "shipping_velocity": 68.0,
+          "technical_depth": 55.0,
+          "learning_rate": 58.0,
+          "public_communication": 46.0,
+          "domain_signal": 62.0
+        },
+        "known_unknowns": [
+          "No public handles were provided, so identity and cross-platform footprint could not be verified.",
+          "No commit history, contribution frequency, or maintenance cadence was provided beyond repository creation dates.",
+          "No evidence of public activity after 2019 was provided.",
+          "No README contents, documentation quality, examples, screenshots, or API docs were observable.",
+          "No source-code contents were provided, so code quality, architecture, complexity, testing, and maintainability could not be assessed directly.",
+          "No deployment status could be verified; URLs and product-like descriptions may no longer be live.",
+          "No usage, traction, customers, revenue, downloads, forks, issues, or community adoption data was provided.",
+          "Star counts are marked as current-day values and may post-date the observed evidence cutoff.",
+          "No collaboration signals were observable, including coauthors, pull requests, reviews, issues, or team projects.",
+          "No employment history, education history, or prior founder history was provided or verified.",
+          "No public writing, talks, essays, tutorials, or technical explanations were provided beyond short repo descriptions.",
+          "No evidence of deep systems work, research papers, production-scale infrastructure, or security-critical implementation was observable.",
+          "No information about whether repositories are original work, forks, school projects, client work, or prototypes was provided.",
+          "No evidence about business judgment, customer discovery, sales ability, or fundraising ability was observable.",
+          "No information on current technical stack proficiency, current domain focus, or recent learning trajectory was provided."
+        ]
+      },
+      {
+        "handle": "ry",
+        "blind_id": "Candidate F09",
+        "cutoff": "2021-02-01",
+        "label": 1,
+        "note": "Deno Land (founded 2021-03; Sequoia Series A 2022)",
+        "n_repos_pre_cutoff": 10,
+        "score": 65.6,
+        "band": [
+          42.4,
+          88.8
+        ],
+        "dimensions": {
+          "shipping_velocity": 68.0,
+          "technical_depth": 80.0,
+          "learning_rate": 74.0,
+          "public_communication": 44.0,
+          "domain_signal": 62.0
+        },
+        "known_unknowns": [
+          "No public handles or profile bio provided.",
+          "No commit history, release history, or contribution cadence visible beyond repository creation dates.",
+          "No README contents, documentation quality, examples, tests, or demos visible beyond short repo descriptions.",
+          "Originality is unclear: repositories may be forks, coursework, ports, experiments, or original work.",
+          "No evidence of current activity after the latest observed repository in 2020.",
+          "No collaboration signals such as pull requests, issues, code reviews, contributors, or team projects.",
+          "No employment history, education history, or institutional affiliation verified, aside from a repository referencing Berkeley EECS151.",
+          "No public writing, talks, blog posts, technical essays, or social communication observed.",
+          "No evidence of users, adoption, revenue, customer discovery, or product traction.",
+          "No information on maintainership quality, responsiveness to issues, or long-term project stewardship.",
+          "No evidence of business/domain intent, founder motivation, or target market.",
+          "No code contents available, so implementation quality, architecture, and complexity cannot be directly inspected.",
+          "No information on whether stars are contemporary to the observed dates or accumulated later.",
+          "No information on private work, proprietary projects, internships, employment projects, or unpublished research."
+        ]
+      },
+      {
+        "handle": "charliermarsh",
+        "blind_id": "Candidate F06",
+        "cutoff": "2023-03-01",
+        "label": 1,
+        "note": "Astral (announced 2023-04, $4M seed; ruff pre-dates company)",
+        "n_repos_pre_cutoff": 10,
+        "score": 64.6,
+        "band": [
+          41.4,
+          87.8
+        ],
+        "dimensions": {
+          "shipping_velocity": 68.0,
+          "technical_depth": 73.0,
+          "learning_rate": 70.0,
+          "public_communication": 52.0,
+          "domain_signal": 60.0
+        },
+        "known_unknowns": [
+          "No public code contents were inspected, so implementation quality, complexity, test coverage, and architecture are unknown.",
+          "No commit history, release history, or maintenance cadence was provided beyond repository creation dates.",
+          "No evidence of deployed products, active users, downloads, revenue, or production adoption.",
+          "No README quality, examples, demos, documentation depth, or onboarding quality was observable from the provided evidence.",
+          "No long-form public writing, blog posts, talks, videos, or design docs were provided.",
+          "No collaboration signals were available: issues, pull requests, reviews, contributors, or community interactions are unknown.",
+          "No employment history, founder history, education, or institutional affiliation is verified; the Princeton CS notes repo is only a weak/unverified signal.",
+          "No evidence of whether the repositories are original work, forks, solo projects, course projects, or team projects.",
+          "No evidence of current activity after the 2022 repositories.",
+          "No information about handles, identity continuity, or cross-platform public footprint was provided.",
+          "No patents, papers, benchmarks, or formal research contributions were observed.",
+          "Stars are current-day values and may post-date the repository creation dates, so they were treated as weak traction signals.",
+          "No information about product judgment, customer discovery, sales ability, recruiting ability, or fundraising ability was observable.",
+          "No security, reliability, scalability, or operational production experience could be verified."
+        ]
+      },
+      {
+        "handle": "antirez",
+        "blind_id": "Candidate F07",
+        "cutoff": "2012-10-01",
+        "label": 0,
+        "note": "Redis creator; joined Redis Labs as employee, never founded",
+        "n_repos_pre_cutoff": 10,
+        "score": 79.4,
+        "band": [
+          56.2,
+          100.0
+        ],
+        "dimensions": {
+          "shipping_velocity": 88.0,
+          "technical_depth": 87.0,
+          "learning_rate": 78.0,
+          "public_communication": 62.0,
+          "domain_signal": 82.0
+        },
+        "known_unknowns": [
+          "No public writing, blog posts, talks, or design documents were provided beyond repository descriptions.",
+          "No README contents, documentation quality, examples, or tutorials were observable.",
+          "No commit history, contribution frequency, or maintenance cadence was provided.",
+          "No evidence of recency after 2012 was provided.",
+          "Original authorship versus fork/mirror/import status is unverified for each repository.",
+          "Code quality, architecture, testing practices, and production robustness were not directly observable.",
+          "Collaboration signals such as pull requests, issues, reviewers, contributors, or team leadership were not provided.",
+          "Employment history, education, and prior company-building experience are unverified.",
+          "User adoption at the time of creation is unknown; current-day star counts may post-date the cutoff and were not heavily weighted.",
+          "Revenue, traction, customers, or startup outcomes are not observable from this footprint.",
+          "Security practices, release management, packaging, and long-term support are unknown.",
+          "No explicit founder domain, intended market, or startup thesis was provided.",
+          "No evidence of community reputation beyond repository metadata and current-day stars was provided.",
+          "No benchmarks, papers, patents, or formal research outputs were provided.",
+          "No information about how much of each project was completed, deployed, or actively used except the description that recidiv was used for Redis CI."
+        ]
+      },
+      {
+        "handle": "sindresorhus",
+        "blind_id": "Candidate F10",
+        "cutoff": "2015-10-01",
+        "label": 0,
+        "note": "Full-time OSS, sponsorship-funded; never founded",
+        "n_repos_pre_cutoff": 10,
+        "score": 68.6,
+        "band": [
+          45.4,
+          91.8
+        ],
+        "dimensions": {
+          "shipping_velocity": 84.0,
+          "technical_depth": 68.0,
+          "learning_rate": 57.0,
+          "public_communication": 61.0,
+          "domain_signal": 73.0
+        },
+        "known_unknowns": [
+          "No public handles were provided, so identity linkage across platforms is unverified.",
+          "No commit history was provided, so actual development cadence, iteration speed, and recency after September 2015 are unknown.",
+          "No README contents were provided beyond short repository descriptions, so documentation quality is mostly unknown.",
+          "No source code contents were provided, so implementation quality, architecture, test coverage, and maintainability are unknown.",
+          "No release history, package download counts, or dependency usage data were provided, so adoption and production usage are unknown.",
+          "Stars are listed as current-day values and may post-date the observed cutoff, so they are weak evidence for contemporaneous traction.",
+          "No issue, pull request, or code review activity was provided, so collaboration style and responsiveness are unknown.",
+          "No employment history, education, or prior founder experience was provided.",
+          "No evidence of business/customer discovery, revenue, user interviews, or product strategy was provided.",
+          "No public long-form writing, talks, or technical explanations were provided.",
+          "No evidence of team-building, leadership, or hiring ability was provided.",
+          "No maintenance history was provided, including whether deprecated packages were responsibly sunset or migrated.",
+          "No security review, performance benchmarks, or production incident handling evidence was provided.",
+          "No information about whether these repositories were original work, forks, ports, or maintained collaboratively was provided."
+        ]
+      },
+      {
+        "handle": "kentcdodds",
+        "blind_id": "Candidate F05",
+        "cutoff": "2019-12-01",
+        "label": 0,
+        "note": "Educator; solo businesses, not VC-backed",
+        "n_repos_pre_cutoff": 10,
+        "score": 66.2,
+        "band": [
+          43.0,
+          89.4
+        ],
+        "dimensions": {
+          "shipping_velocity": 72.0,
+          "technical_depth": 56.0,
+          "learning_rate": 60.0,
+          "public_communication": 74.0,
+          "domain_signal": 69.0
+        },
+        "known_unknowns": [
+          "No public handles were provided, so identity continuity across platforms is unverified.",
+          "No repository contents, READMEs, commit history, or code diffs were provided; technical complexity is inferred only from repo names, languages, and descriptions.",
+          "No evidence of maintenance, issue response, release history, package publication, or long-term ownership of these projects.",
+          "No public writing beyond repo titles/descriptions is visible in the provided evidence.",
+          "No collaboration signals were provided, such as contributors, pull requests, code reviews, or community interactions.",
+          "No employment history, education history, or prior startup history is visible.",
+          "No evidence of user adoption, production usage, revenue, or customer traction.",
+          "No recent activity after October 2019 is provided, so current shipping velocity and trajectory are unknown.",
+          "No information on whether these artifacts were original work, workshop materials, conference talks, course demos, or reproductions of other material.",
+          "No evidence of backend, infrastructure, ML, security, mobile, hardware, or systems-level technical depth.",
+          "No information about execution outside GitHub/public repos, including private repositories, commercial products, or consulting work.",
+          "No information about team leadership, hiring ability, fundraising ability, sales ability, or founder-market fit beyond the frontend/JavaScript education signal."
+        ]
+      },
+      {
+        "handle": "hadley",
+        "blind_id": "Candidate F01",
+        "cutoff": "2021-02-01",
+        "label": 0,
+        "note": "RStudio/Posit employee; never founded",
+        "n_repos_pre_cutoff": 10,
+        "score": 73.6,
+        "band": [
+          50.4,
+          96.8
+        ],
+        "dimensions": {
+          "shipping_velocity": 78.0,
+          "technical_depth": 72.0,
+          "learning_rate": 74.0,
+          "public_communication": 56.0,
+          "domain_signal": 88.0
+        },
+        "known_unknowns": [
+          "No public code contents were provided, so implementation quality and complexity are not directly verifiable.",
+          "No commit history was provided, so actual development cadence, iteration speed, and recency beyond repo creation dates are unknown.",
+          "No release/package distribution data was provided, such as CRAN releases, version tags, binaries, or package download counts.",
+          "No README contents or documentation examples were provided, so public explanation quality is only weakly observable.",
+          "No tests, CI configuration, benchmarks, or maintenance practices were provided.",
+          "No issue, pull request, or code review history was provided, so collaboration and responsiveness are unknown.",
+          "No evidence of whether these repositories are finished, experimental, abandoned, or actively maintained.",
+          "No employment history, education, or prior startup experience was provided or verified.",
+          "No user traction, revenue, customer adoption, or production usage evidence was provided.",
+          "No public writing, talks, blog posts, or social media footprint was provided beyond repository metadata and one workshop repo title.",
+          "No information about team role or authorship depth was provided; ownership versus minor contribution cannot be independently verified from the supplied metadata.",
+          "Handles were empty, so identity linkage across platforms is unknown.",
+          "Stars are current-day values and may post-date the observed dates, so they are not reliable evidence of contemporaneous impact.",
+          "No evidence after 2020-04-28 was provided, so current activity and recent trajectory are unknown."
+        ]
+      },
+      {
+        "handle": "sharkdp",
+        "blind_id": "Candidate F02",
+        "cutoff": "2023-03-01",
+        "label": 0,
+        "note": "fd/bat/hyperfine author; joined Astral 2023 as employee, not founder",
+        "n_repos_pre_cutoff": 10,
+        "score": 76.2,
+        "band": [
+          53.0,
+          99.4
+        ],
+        "dimensions": {
+          "shipping_velocity": 82.0,
+          "technical_depth": 86.0,
+          "learning_rate": 78.0,
+          "public_communication": 55.0,
+          "domain_signal": 80.0
+        },
+        "known_unknowns": [
+          "No public writing, blog posts, talks, or long-form technical explanations were provided.",
+          "README quality, examples, documentation completeness, and onboarding clarity were not observable.",
+          "Commit history, release history, package downloads, and maintenance cadence were not provided.",
+          "No evidence of users, revenue, traction, or production adoption beyond repository existence and star counts; stars may be current-day values and may post-date the observed dates.",
+          "Collaboration signals such as contributors, pull requests, issue discussions, code reviews, and community responsiveness were not provided.",
+          "Employment history, education, research background, and domain credentials are unverified.",
+          "Actual code quality, test coverage, architecture, performance, and security practices were not inspected.",
+          "Whether these repositories are complete, actively maintained, or experimental prototypes is not observable from the summaries alone.",
+          "No evidence of product sense, customer discovery, sales ability, or ability to translate technical projects into a startup was provided.",
+          "No information about team-building, leadership, fundraising, or prior founder experience was provided.",
+          "No information about the candidate's identity, location, availability, or current focus was provided.",
+          "No direct evidence of recent work after the 2022 repository creation date was provided."
+        ]
+      }
+    ],
+    "stats": {
+      "founder_mean": 65.7,
+      "control_mean": 72.8,
+      "gap": -7.1,
+      "auc": 0.12,
+      "exact_p_one_sided": 0.968
+    }
+  }
+}

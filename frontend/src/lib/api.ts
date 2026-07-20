@@ -8,6 +8,7 @@
 export const API_BASE =
   (typeof window !== "undefined" &&
     (window as unknown as { __BRAINVC_API__?: string }).__BRAINVC_API__) ||
+  (import.meta.env?.VITE_API_BASE as string | undefined) ||
   "http://localhost:8000/api";
 
 export type TrustLevel = "high" | "medium" | "low" | "flagged";
